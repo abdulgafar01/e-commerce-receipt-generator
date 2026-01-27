@@ -14,13 +14,13 @@ const buildReceiptData = (order) => {
   const taxRate = 0.075; // 7.5%
   const tax = subtotal * taxRate;
 
-  const discount = 0; // placeholder
+  const discount = 0; // No discount for now
 
   const totalAmount = subtotal + tax - discount;
 
   return {
     receiptMeta: {
-      receiptId: null, // added later
+      receiptId: null,
       issuedAt: new Date(),
     },
     customer: {
@@ -41,7 +41,7 @@ const buildReceiptData = (order) => {
       currency: "NGN",
     },
     business: {
-      name: "Ecomerce Store",
+      name: "Ecommerce Store",
       email: "support@busari.com",
     },
   };
